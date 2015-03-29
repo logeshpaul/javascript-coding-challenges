@@ -1,8 +1,11 @@
 # Challenges
 
-Repo to maintain some challenges in javascript
+Repo holds some challenges in javascript
 
-* Anagrams
-* Reverse a String
+Click on the link to read the description and solution
+
+* [Anagrams](https://github.com/logeshpaul/coding-challenges/tree/master/Queue-Operations)
+* [Queue Operations](https://github.com/logeshpaul/coding-challenges/tree/master/Queue-Operations)
+* [Reverse a String](https://github.com/logeshpaul/coding-challenges/tree/master/Reverse-A-String)
 
 
