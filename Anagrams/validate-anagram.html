@@ -1,35 +1,34 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-    <head>
-    </head>
-    <body>
+<head>
+</head>
+<body>
+	<h1>Check Anagrams</h1>
 
-        <h1>Check Anagrams</h1>
+	Compare <input type="text" id="firstWord"/> & <input type="text" id="secondWord"/>
+	<button id="compare">Compare Strings</button>
+	<div id="output"></div>
 
-        Compare <input type="text" id="firstWord"/> & <input type="text" id="secondWord"/>
-      	<button id="compare">Compare Strings</button>
-        <div id="output"></div>
+	<script>
+	var actionButton = document.getElementById("compare");
+	var outputInfo = document.getElementById("output");
 
-        <script>
-        var actionButton = document.getElementById("compare");
-		var outputInfo = document.getElementById("output");
+	actionButton.onclick = function(){
+		var firstWord = document.getElementById("firstWord").value;
+		var secondWord = document.getElementById("secondWord").value;
+		checkForAnagrams(firstWord, secondWord);
+	};
 
-		actionButton.onclick = function(){
-			var firstWord = document.getElementById("firstWord").value;
-			var secondWord = document.getElementById("secondWord").value;
-
-		    checkForAnagrams(firstWord, secondWord);
-		};
-
-		var checkForAnagrams = function(a, b) {
-			var firstWord = a.toLowerCase().split('').sort().join('');
-			var secondWord = b.toLowerCase().split('').sort().join('');
-			if(firstWord === secondWord) {
-		        outputInfo.innerHTML = "True. It is an anagram";
-		    } else {
-		        outputInfo.innerHTML = "False. It's not an anagram";
-		    }
-		};
-        </script>
-    </body>
+	var checkForAnagrams = function(a, b) {
+		var firstWord = a.toLowerCase().split('').sort().join('');
+		var secondWord = b.toLowerCase().split('').sort().join('');
+		if(firstWord === secondWord) {
+			outputInfo.innerHTML = "True. It is an anagram";
+		}
+		else {
+			outputInfo.innerHTML = "False. It's not an anagram";
+		}
+	};
+	</script>
+</body>
 </html>
