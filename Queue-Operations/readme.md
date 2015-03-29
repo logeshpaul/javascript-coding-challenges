@@ -15,3 +15,7 @@ Note: First integer in the list of integers is the HEAD of the queue and the las
 Print the modified queue after doing enqueue or dequeue operation.
 
 Input shall be taken in a textarea and output printed in a div
+
+# Solution
+
+[Demo](http://logeshpaul.github.io/coding-challenges/demo/queue-operations.html)
