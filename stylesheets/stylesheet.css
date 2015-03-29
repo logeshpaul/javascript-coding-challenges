@@ -46,7 +46,7 @@ header {
 header h1 {
   font-size: 30px;
   line-height: 1.5;
-  margin: 0 0 0 -40px;
+  margin: 0 0 0 0;
   font-weight: bold;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   color: #b5e853;
@@ -55,11 +55,6 @@ header h1 {
                0 0 10px rgba(181, 232, 83, 0.1);
   letter-spacing: -1px;
   -webkit-font-smoothing: antialiased;
-}
-
-header h1:before {
-  content: "./ ";
-  font-size: 24px;
 }
 
 header h2 {
@@ -244,4 +239,34 @@ a {
 
 .cf {
   zoom:1;
+}
+
+.challenge {
+  margin: 30px 0;
+}
+
+hr.style-eight {
+  padding: 0;
+  border: none;
+  border-top: medium double #b5e853;
+  color: #b5e853;
+  text-align: center;
+}
+hr.style-eight:after {
+  content: "§";
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: #151515 url("../images/bkg.png") 0 0;
+}
+
+.challenge-link a {
+  display: block;
+  float: right;
+  background: #b5e853;
+  color: #333;
+  text-decoration: none;
+  padding: 10px 25px;
 }
