@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+    </head>
+    <body>
+
+        <h1>Queue</h1>
+
+		<textarea name="" id="textInput" cols="30" rows="10"></textarea>
+
+
+		<button id="updateQueue">Update Queue</button>
+
+        <div id="output">
+        	<h3>Current queue status</h3>
+        	<p>Total Count: <span id="queue-count"></span></p>
+        	<p>Queue Items: <span id="queue-items"></span></p>
+        </div>
+
+        <script>
+        // Element identification
+        var textInput = document.getElementById("textInput");
+		var actionButton = document.getElementById("updateQueue");
+
+        var mainArray = [1, 3, 5, 4];
+        var queueEnqueue = 1;
+	    var queueDequeue = 0;
+	    var enqueueItem = "";
+
+        // Update textarea with current queue items
+        (updateInformation = function() {
+        	var queueSize = mainArray.length;
+	        var queueCollection = mainArray.join();
+
+
+	        // update textarea
+        	textInput.value = (queueSize + "\n" + queueCollection + "\n" + queueEnqueue);
+
+        	// Update display
+        	var displayQueueCount = document.getElementById("queue-count");
+        	var displayQueueItems = document.getElementById("queue-items");
+
+        	displayQueueCount.innerHTML = queueSize;
+        	displayQueueItems.innerHTML = queueCollection;
+
+        })();
+
+
+        // QUEUE OPERATIONS
+        // Adds item to rear
+        var enqueue = function(item) {
+        	mainArray.push(item);
+        };
+        // Removes item from front
+        var dequeue = function() {
+        	mainArray.shift();
+        }
+
+        actionButton.onclick = function(){
+			var lines = textInput.value.split('\n');
+			console.log(lines[2]);
+			if(lines[2] === "1" && lines[3] !== "") {
+				//console.log("Enqueue");
+				enqueue(lines[3]);
+			}
+			else if(lines[2] === "1" && lines[3] === "") {
+				alert("Error: Plese enter queue item");
+			}
+			else {
+				dequeue();
+			}
+
+			updateInformation();
+		};
+
+        </script>
+    </body>
+</html>
