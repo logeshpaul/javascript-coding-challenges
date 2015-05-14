@@ -18,4 +18,4 @@ Input shall be taken in a textarea and output printed in a div
 
 # Solution
 
-[Demo](http://logeshpaul.github.io/coding-challenges/demo/queue-operations.html)
+[Demo](http://logeshpaul.github.io/javascript-coding-challenges/demo/queue-operations.html)

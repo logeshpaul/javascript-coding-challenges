@@ -26,4 +26,4 @@ Input shall be taken in a texarea and output printed in a div
 
 # Solution
 
-[Demo](http://logeshpaul.github.io/coding-challenges/demo/validate-anagram.html)
+[Demo](http://logeshpaul.github.io/javascript-coding-challenges/demo/validate-anagram.html)
