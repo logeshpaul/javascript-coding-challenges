@@ -133,8 +133,6 @@ function reverse(s) {
 
 The final method I wish to show uses the same ideology as the last implementation (half-indexing) but instead relies on recursion to reverse the string instead of a for-loop.
 
-http://logeshpaul.github.io/javascript-coding-challenges/demo/reverse-string.html
-
 # Demo
 
 [Demo Link](http://logeshpaul.github.io/javascript-coding-challenges/demo/reverse-string.html)
