@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+</head>
+<body>
+  <h1>Reverse String</h1>
+
+  Enter String <input type="text" id="input"/> <br> <br>
+  
+  <div id="output"></div> <br>
+  
+  <pre>    Choose your method to reverse the string </pre>
+     
+    <ul>   
+  <li> <button id="m1" onclick="m1()">Decrementing for-loop with concatenation</button> </li> <br>
+  <li> <button id="m2" onclick="m2()">Incrementing/decrementing for-loop with two arrays</button> </li> <br>
+  <li> <button id="m3" onclick="m3()">Incrementing for-loop with array pushing and charAt</button> </li> <br>
+  <li> <button id="m4" onclick="m4()">Inbuilt JS function</button> </li> <br>
+  <li> <button id="m5" onclick="m5()"> Decrementing while-loop with concatenation and substring</button> </li> <br>
+  <li> <button id="m6" onclick="m6()">Single for-loop declaration with concatenation</button> </li> <br>
+  <li> <button id="m7" onclick="m7()">Recursion with substring and charAt</button> </li> <br>
+  <li> <button id="m8" onclick="m8()">Internal function recursion</button> </li> <br>
+  <li> <button id="m9" onclick="m9()">Half-index switch for-loop</button> </li> <br>
+  <li> <button id="m10" onclick="m10()">Half-index recursion</button> </li> <br>
+  </ul>
+
+  <script>
+  
+  var outputInfo = document.getElementById("output");
+  
+  function m1() {
+    
+    var s= document.getElementById("input").value;
+    var reversedString = "";
+    for(var i= s.length -1; i>=0; i--) {
+    reversedString += s[i]; //reversedString = reversedString+s[i];
+    }
+    
+    outputInfo.innerHTML = "Reversed String is = " + reversedString;
+    
+    }
+    
+  function m2() {
+    
+    var s= document.getElementById("input").value;
+    var o = [];
+    for (var i = s.length - 1, j = 0; i >= 0; i--, j++)
+    o[j] = s[i];
+    outputInfo.innerHTML = "Reversed String is = " + o.join('');
+    
+    }
+
+    function m3() {
+    
+    var s= document.getElementById("input").value;
+    var o = [];
+    for (var i = 0, len = s.length; i <= len; i++)
+    o.push(s.charAt(len - i));
+    outputInfo.innerHTML = "Reversed String is = " + o.join('');
+    
+    }
+    
+  function m4() {
+    
+    var s= document.getElementById("input").value;
+    outputInfo.innerHTML = "Reversed String is = " + s.split('').reverse().join('');
+    
+    }
+  
+    function m5() {
+     
+     var s= document.getElementById("input").value;
+     var i = s.length,
+     o = '';
+       while (i > 0) {
+     o += s.substring(i - 1, i);
+     i--;
+     }
+    outputInfo.innerHTML = "Reversed String is = " + o;
+    
+    } 
+    
+  function m6() {
+     
+     var s= document.getElementById("input").value;
+     for (var i = s.length - 1, o = ''; i >= 0; o += s[i--]) { }
+       outputInfo.innerHTML = "Reversed String is = " + o;
+    
+    }
+    
+    function m7(s) {
+     
+     var s= document.getElementById("input").value;
+     var o = m7r(s);
+       outputInfo.innerHTML = "Reversed String is = " + o;
+    
+    }
+
+    function m7r(s) {
+  return (s === '') ? '' : m7r(s.substr(1)) + s.charAt(0);
+  }   
+    
+   function m8(s) {
+     
+     var s= document.getElementById("input").value;
+     var o = m8r(s);
+       outputInfo.innerHTML = "Reversed String is = " + o;
+    }
+    
+  function m8r(s) {
+  function rev(s, len, o) {
+    return (len === 0) ? o : rev(s, --len, (o += s[len]));
+  };
+  return rev(s, s.length, '');
+  }
+  
+  function m9() {
+     
+     var s= document.getElementById("input").value;
+     o=m9r(s);
+       outputInfo.innerHTML = "Reversed String is = " + o;
+    
+    }
+    
+    function m9r(s) {
+    s = s.split('');
+    var len = s.length,
+    halfIndex = Math.floor(len / 2) - 1,
+    tmp;
+    for (var i = 0; i <= halfIndex; i++) {
+    tmp = s[len - i - 1];
+    s[len - i - 1] = s[i];
+    s[i] = tmp;
+  }
+  return s.join('');
+}
+
+   function m10() {
+     
+     var s= document.getElementById("input").value;
+     o=m10r(s);
+       outputInfo.innerHTML = "Reversed String is = " + o;
+    
+    }
+  
+  function m10r(s) {
+     
+      if (s.length < 2)
+      return s;
+      var halfIndex = Math.ceil(s.length / 2);
+      return m10r(s.substr(halfIndex)) +
+      m10r(s.substr(0, halfIndex));
+    
+    } 
+    
+    
+  </script>
+</body>
+</html>
