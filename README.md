@@ -17,7 +17,7 @@ Contribution would be of great to have more challenges in one place
 * Make your feature addition or bug fix
 * Send pull request
 
-**Active Contributers**
+**Active Contributors**
 
 [![Logesh Paul](https://avatars3.githubusercontent.com/u/41541?v=3&s=72)](http:/www.github.com/logeshpaul) [![Ankur Chandra](https://avatars1.githubusercontent.com/u/12120991?v=3&s=72)](https://github.com/thegooglerlm10)
 
