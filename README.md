@@ -7,6 +7,7 @@ Click on the link to read the description and solution
 * [Anagrams](Anagrams)
 * [Queue Operations](Queue-Operations)
 * [Reverse a String](Reverse-A-String)
+* [Find Anagram Mappings](Find-Anagram-Mappings)
 
 ## Contributions
 
