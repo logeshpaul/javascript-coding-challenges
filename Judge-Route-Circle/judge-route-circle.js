@@ -16,20 +16,20 @@ const judgeCircle = function(moves) {
 };
 
 const getNewPosition = (position, move) => {
-switch (move) {
-      case "U":
-        position.y++;
-        break;
-      case "D":
-        position.y--;
-        break;
-      case "R":
-        position.x++;
-        break;
-      case "L":
-        position.x--;
-        break;
-}
+  switch (move) {
+    case "U":
+      position.y++;
+      break;
+    case "D":
+      position.y--;
+      break;
+    case "R":
+      position.x++;
+      break;
+    case "L":
+      position.x--;
+      break;
+  }
   
   return position;
 };
