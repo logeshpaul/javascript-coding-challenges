@@ -9,6 +9,7 @@ Click on the link to read the description and solution
 * [Reverse a String](Reverse-A-String)
 * [Find Anagram Mappings](Find-Anagram-Mappings)
 * [Flatten Array](Flatten-Array)
+* [Jewels and Stones](Jewels-and-Stones)
 
 ## Contributions
 
