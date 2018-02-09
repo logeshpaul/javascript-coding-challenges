@@ -11,6 +11,7 @@ Click on the link to read the description and solution
 * [Flatten Array](Flatten-Array)
 * [Jewels and Stones](Jewels-and-Stones)
 * [Judge Route Circle](Judge-Route-Circle)
+* [Move Zeros](Move-Zeros)
 
 ## Contributions
 
