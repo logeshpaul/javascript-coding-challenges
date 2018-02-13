@@ -12,6 +12,7 @@ Click on the link to read the description and solution
 * [Jewels and Stones](Jewels-and-Stones)
 * [Judge Route Circle](Judge-Route-Circle)
 * [Move Zeros](Move-Zeros)
+* [Find Disappeared Numbers](Find-Disappeared-Numbers)
 
 ## Contributions
 
